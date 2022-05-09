@@ -17,13 +17,11 @@ public class EmployeeWageProblem {
             System.out.println("Welcome to Employee Wage Computation Program on Master "
                     + "Branch  ");
                 int dailyWage=0;
-                int workingHours = 0;
                 int empStatus = (int) (Math.random() * 10) % 3;
                 System.out.println(empStatus);
             switch (empStatus) {
                 case IS_FULL_TIME:
                     System.out.println("Employee worked FULL TIME");
-                    //workingHours = workingHours + FULL_DAY_HOUR;
                     dailyWage = WAGE_PER_HOUR * FULL_DAY_HOUR;
                     break;
                 case IS_PART_TIME:
