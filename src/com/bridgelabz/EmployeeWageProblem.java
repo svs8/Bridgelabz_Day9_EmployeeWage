@@ -1,4 +1,5 @@
 package com.bridgelabz;
+import java.util.Scanner;
 
 public class EmployeeWageProblem {
 
@@ -10,13 +11,7 @@ public class EmployeeWageProblem {
 
     private static final int IS_PART_TIME = 2;
 
-    private static final int WAGE_PER_HOUR = 20;
-
-    private static final int TOTAL_WORKING_DAYS = 20;
-
-    private static final int TOTAL_WORKING_HOURS = 100;
-
-    public static void ComputeEmployeeWage() {
+    public static void ComputeEmployeeWage(int WAGE_PER_HOUR,int TOTAL_WORKING_DAYS,int TOTAL_WORKING_HOURS ) {
         int workingHours = 0;
         int dayCount = 1;
         int totalWage = 0;
@@ -47,11 +42,32 @@ public class EmployeeWageProblem {
 
     }
 
-
+        static Scanner sc=new Scanner(System.in);
     public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
         System.out.println("Welcome to Employee Wage Computation Program on Master "
                 + "Branch  ");
-        ComputeEmployeeWage();
+        System.out.println(" Enter the Company Name :");
+        String companyName = sc.next();
+        System.out.println("enter the wage per hour: ");
+        int WAGE_PER_HOUR = sc.nextInt();
+        System.out.println("enter the Total Working Days: ");
+        int TOTAL_WORKING_DAYS = sc.nextInt();
+        System.out.println("enter the Total working hour: ");
+        int TOTAL_WORKING_HOURS = sc.nextInt();
+       ComputeEmployeeWage(WAGE_PER_HOUR,TOTAL_WORKING_DAYS, TOTAL_WORKING_HOURS );
+
+        System.out.println(" Enter the Company Name :");
+        String companyName1 = sc.next();
+        System.out.println("enter the wage per hour: ");
+        int WAGE_PER_HOUR1 = sc.nextInt();
+        System.out.println("enter the Total Working Days: ");
+        int TOTAL_WORKING_DAYS1 = sc.nextInt();
+        System.out.println("enter the Total working hour: ");
+        int TOTAL_WORKING_HOURS1 = sc.nextInt();
+        ComputeEmployeeWage(WAGE_PER_HOUR1,TOTAL_WORKING_DAYS1, TOTAL_WORKING_HOURS1 );
+
+
     }
 }
 
